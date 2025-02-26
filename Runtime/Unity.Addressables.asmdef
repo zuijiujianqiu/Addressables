@@ -2,7 +2,9 @@
     "name": "Unity.Addressables",
     "rootNamespace": "",
     "references": [
-        "Unity.ResourceManager"
+        "Unity.ResourceManager",
+        "UnityEditor.UI",
+        "UnityEngine.UI"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

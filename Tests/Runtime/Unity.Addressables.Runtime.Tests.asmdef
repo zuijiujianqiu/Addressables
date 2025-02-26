@@ -8,7 +8,9 @@
         "Unity.ScriptableBuildPipeline.Editor",
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "Unity.Services.Ccd.Management"
+        "Unity.Services.Ccd.Management",
+        "UnityEditor.UI",
+        "UnityEngine.UI"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

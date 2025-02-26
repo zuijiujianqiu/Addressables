@@ -7,7 +7,9 @@
         "Unity.ScriptableBuildPipeline.Editor",
         "Unity.ScriptableBuildPipeline",
         "Unity.Services.Core",
-        "Unity.Services.Ccd.Management"
+        "Unity.Services.Ccd.Management",
+        "UnityEditor.UI",
+        "UnityEngine.UI"
     ],
     "includePlatforms": [
         "Editor"
