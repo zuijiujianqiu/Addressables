@@ -1,9 +1,7 @@
 {
     "name": "Unity.Addressables",
     "references": [
-        "Unity.ResourceManager",
-        "UnityEditor.UI",
-        "UnityEngine.UI"
+        "Unity.ResourceManager"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [],

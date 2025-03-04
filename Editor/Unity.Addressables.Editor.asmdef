@@ -5,9 +5,7 @@
         "Unity.ResourceManager",
         "Unity.ScriptableBuildPipeline.Editor",
         "Unity.ScriptableBuildPipeline",
-        "Unity.Services.CCD.Management",
-        "UnityEditor.UI",
-        "UnityEngine.UI"
+        "Unity.Services.CCD.Management"
     ],
     "optionalUnityReferences": [],
     "includePlatforms": [

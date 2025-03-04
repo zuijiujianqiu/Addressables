@@ -2,9 +2,7 @@
     "name": "Unity.ResourceManager.Tests",
     "references": [
         "Unity.ResourceManager",
-        "Unity.Addressables.Tests",
-        "UnityEditor.UI",
-        "UnityEngine.UI"
+        "Unity.Addressables.Tests"
     ],
     "optionalUnityReferences": [
         "TestAssemblies"
