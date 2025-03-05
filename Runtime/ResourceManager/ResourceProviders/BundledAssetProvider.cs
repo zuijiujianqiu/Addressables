@@ -25,7 +25,9 @@ namespace UnityEngine.ResourceManagement.ResourceProviders
             {
                 if (results == null || results.Count == 0)
                     return default(T);
-
+                
+                // Q&A: 当一个资源存在多个AssetsBundle的依赖项时，如何确认要从那个AssetsBundle中加载资源
+                // A: 观察firstBundleWrapper可以看到是从第一个AssetsBundle中加载资源
                 IAssetBundleResource bundle = null;
                 bool firstBundleWrapper = true;
                 for (int i = 0; i < results.Count; i++)
