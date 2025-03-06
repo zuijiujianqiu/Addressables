@@ -326,7 +326,10 @@ namespace UnityEditor.AddressableAssets.Build.DataBuilders
             using (m_Log.ScopedStep(LogLevel.Info, "Generate Catalog"))
             {
                 contentCatalog = new ContentCatalogData(ResourceManagerRuntimeData.kCatalogAddress);
-                contentCatalog.SetData(aaContext.locations.OrderBy(f => f.InternalId).ToList(), aaContext.Settings.OptimizeCatalogSize);
+                // 注意：因为当前的打包逻辑要对每个AssetPackage生成对应的Catalog，我们会修改Location的Dependencies
+                // 因而这里先生成一个空的Catalog文件
+                // contentCatalog.SetData(aaContext.locations.OrderBy(f => f.InternalId).ToList(), aaContext.Settings.OptimizeCatalogSize);
+                contentCatalog.SetData(new List<ContentCatalogDataEntry>(), aaContext.Settings.OptimizeCatalogSize);
 
                 contentCatalog.ResourceProviderData.AddRange(m_ResourceProviderData);
                 foreach (var t in aaContext.providerTypes)
