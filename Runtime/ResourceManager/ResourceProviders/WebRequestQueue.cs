@@ -95,6 +95,12 @@ namespace UnityEngine.ResourceManagement
                 System.Threading.Thread.Sleep(millisecondsTimeout);
             }
         }
+        
+        internal static void DequeueRequest(UnityWebRequestAsyncOperation operation)
+        {
+            operation.completed -= OnWebAsyncOpComplete;
+            OnWebAsyncOpComplete(operation);
+        }
 
         private static void OnWebAsyncOpComplete(AsyncOperation operation)
         {

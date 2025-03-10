@@ -381,6 +381,8 @@ namespace UnityEngine.ResourceManagement.ResourceProviders
             {
                 while (!UnityWebRequestUtilities.IsAssetBundleDownloaded(op))
                     System.Threading.Thread.Sleep(k_WaitForWebRequestMainThreadSleep);
+                
+                WebRequestQueue.DequeueRequest(op);
             }
             
             if (m_RequestOperation is UnityWebRequestAsyncOperation && !m_WebRequestCompletedCallbackCalled)
