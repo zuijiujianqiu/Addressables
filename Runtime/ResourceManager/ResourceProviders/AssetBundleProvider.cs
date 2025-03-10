@@ -546,6 +546,13 @@ namespace UnityEngine.ResourceManagement.ResourceProviders
             {
                 if (!m_Completed)
                 {
+                    if (!(m_ProvideHandle.Location is DownloadOnlyLocation))
+                    {
+                        // this loads the bundle into memory which we don't want to do with download only bundles
+                        m_AssetBundle = m_downloadHandler.assetBundle;
+                    }
+                    m_downloadHandler.Dispose();
+                    m_downloadHandler = null;
                     m_ProvideHandle.Complete(this, true, null);
                     m_Completed = true;
                 }
